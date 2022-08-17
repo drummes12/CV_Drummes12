@@ -1,0 +1,20 @@
+{
+  "name": "primer-portafolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drummes12/primer-portafolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drummes12/primer-portafolio/issues"
+  },
+  "homepage": "https://github.com/drummes12/primer-portafolio#readme"
+}
