@@ -24,10 +24,10 @@ const fetchData = async (urlAPI, options) => {
       .map(
         (driver) =>
           `
-          <div class="group relative">
+          <div class="w-60 relative group snap-always snap-center shrink-0 first:pl-8 last:pr-8 rounded-xl hover:drop-shadow-2xl">
             <div
-              class="w-full bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:aspect-none">
-              <img src="./assets/images/drivers/${driver.Name}_${driver.Country}.webp" alt="${driver.Name}" onerror="this.src='https://graffica.info/wp-content/uploads/2017/11/F1_Unveil_Images_Final-1000-1200x675.jpg';" class="w-full">
+              class="bg-gray-200 rounded-md overflow-hidden">
+              <img src="./assets/images/drivers/${driver.Name}_${driver.Country}.webp" alt="${driver.Name}" onerror="this.src='https://graffica.info/wp-content/uploads/2017/11/F1_Unveil_Images_Final-1000-1200x675.jpg';" class="object-cover">
               <span class="font-bold text-sm absolute inset-2">${driver.POS}</span>
             </div>
             <div class="mt-4 flex justify-between">
@@ -44,7 +44,15 @@ const fetchData = async (urlAPI, options) => {
       )
       .join("")}
     `;
-    content.innerHTML = view;
+    content.innerHTML = `
+      <div class="snap-center shrink-0">
+        <div class="shrink-0 w-4 sm:w-20"></div>
+      </div>
+      ${view}
+      <div class="snap-center shrink-0">
+        <div class="shrink-0 w-4 sm:w-20"></div>
+      </div>
+    `;
   } catch (error) {
     console.error(error);
   }
